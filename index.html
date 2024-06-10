@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="flex justify-center items-center min-h-screen bg-gradient-to-b from-blue-500 to-blue-100">
+
+    <div id="weatherContain" class="bg-opacity-80 text-lg rounded bg-white shadow-md p-6">
+        <h1 class="text-center mb-4 text-2xl font-semibold">Weather App</h1>
+        <div class="flex mb-4 items-center justify-center ">
+            <input type="text" id="city" placeholder="Enter City Name" class="px-4 py-2 border focus:outline-none rounded-r focus:border-blue-500">
+            <button onclick="getWeather()" id="getWeatherBtn"
+                class="bg-blue-500 text-white px-4 py-2 rounded-r transition hover:bg-green-700 translate-x-1">Get Weather</button>
+        </div>
+
+        <div id="weather" class="flex flex-col">
+            <h2 id="location" class="text-center mb-4 text-2xl font-semibold"></h2>
+            <div class="flex items-center justify-center mb-2">
+                <div id="weatherIcon" class="mr-2">
+                </div>
+                <p id="time" class="text-center"></p>
+            </div>
+        </div>
+        <div id="weatherContent" class="grid grid-cols-2 gap-4 p-4 rounded">
+            <p id="temperature" class="p-2  rounded"></p>
+            <p id="description" class="p-2 rounded"></p>
+            <p id="humidity" class="p-2 rounded"></p>
+            <p id="wind" class="p-2 rounded"></p>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
